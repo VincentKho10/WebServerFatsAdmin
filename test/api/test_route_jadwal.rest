@@ -1,0 +1,79 @@
+GET http://localhost:3000/jadwal
+
+###
+
+GET http://localhost:3000/jadwal/62590b4084dcbe470b7be481
+
+###
+
+POST http://localhost:3000/jadwal
+Content-Type: application/json
+
+{
+    "program_studi": "teti",
+    "mata_kuliah": "teti",
+    "kelas": "teti",
+    "waktu": "teti",
+    "dosen": {
+        "nama": "John Donam",
+        "password": "testpass1242",
+        "nrp": "7200233"
+    },
+    "mahasiswas": [
+        {
+            "nama": "John Don",
+            "password": "testpass12",
+            "nrp": "720033"
+        },{
+            "nama": "John Done",
+            "password": "testpass112",
+            "nrp": "720032"
+        }
+    ],
+    "semester": "teti",
+    "kode_mk": "teti",
+    "jumlah_mahasiswa": "teti",
+    "ruang": "teti",
+    "active": true
+}
+
+###
+
+DELETE http://localhost:3000/jadwal/62590b4084dcbe470b7be481
+
+###
+
+PATCH http://localhost:3000/jadwal/62590b4084dcbe470b7be481
+Content-Type: application/json
+
+{
+    "program_studi": "tetia",
+    "mata_kuliah": "tetia",
+    "kelas": "tetia",
+    "waktu": "tetia",
+    "dosen": {
+        "nama": "John Don",
+        "password": "testpass12",
+        "nrp": "720033"
+    },
+    "mahasiswas": [
+        {
+            "nama": "John Don",
+            "password": "testpass12",
+            "nrp": "720033"
+        },{
+            "nama": "John Done",
+            "password": "testpass112",
+            "nrp": "720032"
+        },{
+            "nama": "John Do",
+            "password": "testpass112",
+            "nrp": "720032"
+        }
+    ],
+    "semester": "tetia",
+    "kode_mk": "tetia",
+    "jumlah_mahasiswa": "tetia",
+    "ruang": "tetia",
+    "active": true
+}

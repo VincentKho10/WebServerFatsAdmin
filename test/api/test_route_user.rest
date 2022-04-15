@@ -1,0 +1,37 @@
+GET http://localhost:3000/user
+
+###
+
+GET http://localhost:3000/user/6258564b4bdd962056b9692f
+
+###
+
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "mahasiswa":{
+        "nama": "John Don",
+        "password": "testpass12",
+        "nrp": "720033"
+    },
+    "mac_address": "23:DE:E4:R5:E4:EE"
+}
+
+###
+
+DELETE http://localhost:3000/user/6258564b4bdd962056b9692f
+
+###
+
+PATCH http://localhost:3000/user/6258564b4bdd962056b9692f
+Content-Type: application/json
+
+{
+    "mahasiswa": {
+        "nama": "John Doner",
+        "password": "testpass122",
+        "nrp": "7200333"
+    },
+    "mac_address": "23:DE:E4:R5:E4:EEe"
+}

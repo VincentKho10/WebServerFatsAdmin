@@ -1,0 +1,31 @@
+GET http://localhost:3000/dosen
+
+###
+
+GET http://localhost:3000/dosen/6257d8b447024aa3cc627dbc
+
+###
+
+POST http://localhost:3000/dosen
+Content-Type: application/json
+
+{
+    "nama": "John Donam",
+    "password": "testpass1242",
+    "nrp": "7200233"
+}
+
+###
+
+DELETE http://localhost:3000/dosen/6257d8f947024aa3cc627dc8
+
+###
+
+PATCH http://localhost:3000/dosen/6257d8f947024aa3cc627dc8
+Content-Type: application/json
+
+{
+    "nama": "John Doa",
+    "password": "testpass1234",
+    "nrp": "720033"
+}

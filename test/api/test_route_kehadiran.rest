@@ -1,0 +1,83 @@
+GET http://localhost:3000/kehadiran
+
+###
+
+GET http://localhost:3000/kehadiran/625927d08076bfcb5cca802f
+
+###
+
+POST http://localhost:3000/kehadiran
+Content-Type: application/json
+
+{
+    "jadwal": {
+        "program_studi": "teti",
+        "mata_kuliah": "teti",
+        "kelas": "teti",
+        "waktu": "teti",
+        "dosen": {
+            "nama": "John Donam",
+            "password": "testpass1242",
+            "nrp": "7200233"
+        },
+        "mahasiswas": [
+            {
+                "logged": false,
+                "nama": "John Don",
+                "password": "testpass12",
+                "nrp": "720033"
+            },{
+                "logged": false,
+                "nama": "John Done",
+                "password": "testpass112",
+                "nrp": "720032"
+            }
+        ],
+        "semester": "teti",
+        "kode_mk": "teti",
+        "jumlah_mahasiswa": "teti",
+        "ruang": "teti",
+        "active": true
+    }
+}
+
+###
+
+DELETE http://localhost:3000/kehadiran/625927d08076bfcb5cca802f
+
+###
+
+PATCH http://localhost:3000/kehadiran/625927d08076bfcb5cca802f
+Content-Type: application/json
+
+{
+    "jadwal": {
+        "program_studi": "teti",
+        "mata_kuliah": "teti",
+        "kelas": "teti",
+        "waktu": "teti",
+        "dosen": {
+            "nama": "John Donam",
+            "password": "testpass1242",
+            "nrp": "7200233"
+        },
+        "mahasiswas": [
+            {
+                "logged": true,
+                "nama": "John Don",
+                "password": "testpass12",
+                "nrp": "720033"
+            },{
+                "logged": true,
+                "nama": "John Done",
+                "password": "testpass112",
+                "nrp": "720032"
+            }
+        ],
+        "semester": "teti",
+        "kode_mk": "teti",
+        "jumlah_mahasiswa": "teti",
+        "ruang": "teti",
+        "active": true
+    }
+}

@@ -1,0 +1,31 @@
+GET http://localhost:3000/mahasiswa
+
+###
+
+GET http://localhost:3000/mahasiswa/6257da9447d79840ba435342
+
+###
+
+POST http://localhost:3000/mahasiswa
+Content-Type: application/json
+
+{
+    "nama": "John Don",
+    "password": "testpass12",
+    "nrp": "720033"
+}
+
+###
+
+DELETE http://localhost:3000/mahasiswa/6257da8b47d79840ba435340
+
+###
+
+PATCH http://localhost:3000/mahasiswa/6257da9447d79840ba435342
+Content-Type: application/json
+
+{
+    "nama": "John Doa",
+    "password": "testpass1234",
+    "nrp": "720033"
+}
