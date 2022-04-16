@@ -26,4 +26,7 @@ app.use('/jadwal', jadwalRouter)
 const kehadiranRouter = require('./routes/kehadirans')
 app.use('/kehadiran', kehadiranRouter)
 
+const adminPanel = require('./src')
+app.use('/', adminPanel)
+
 app.listen(process.env.PORT || 1337, () => console.log('Server Started'))
