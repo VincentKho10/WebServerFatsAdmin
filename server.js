@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 const express= require('express')
 const app = express()
 const mongoose = require('mongoose')
@@ -26,4 +24,4 @@ app.use('/jadwal', jadwalRouter)
 const kehadiranRouter = require('./routes/kehadirans')
 app.use('/kehadiran', kehadiranRouter)
 
-app.listen(process.env.PORT || 3000, () => console.log('Server Started'))
+app.listen(process.env.PORT || 1337, () => console.log('Server Started'))
