@@ -1,12 +1,12 @@
-GET http://localhost:3000/kehadiran
+GET http://localhost:1337/kehadiran
 
 ###
 
-GET http://localhost:3000/kehadiran/625927d08076bfcb5cca802f
+GET http://localhost:1337/kehadiran/625927d08076bfcb5cca802f
 
 ###
 
-POST http://localhost:3000/kehadiran
+POST http://localhost:1337/kehadiran
 Content-Type: application/json
 
 {
