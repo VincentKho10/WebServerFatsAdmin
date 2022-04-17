@@ -11,22 +11,22 @@ db.once('open', () => console.log('Connected to Database'))
 
 app.use(express.json())
 
-const dosenRouter = require('./routes/dosens')
+const dosenRouter = require('./src/controller/dosens')
+const mahasiswaRouter = require('./src/controller/mahasiswas')
+const userRouter = require('./src/controller/users')
+const jadwalRouter = require('./src/controller/jadwals')
+const kehadiranRouter = require('./src/controller/kehadirans')
+
 app.use('/dosen', dosenRouter)
-
-const mahasiswaRouter = require('./routes/mahasiswas')
 app.use('/mahasiswa', mahasiswaRouter)
-
-const userRouter = require('./routes/mahasiswa_users')
 app.use('/user', userRouter)
-
-const jadwalRouter = require('./routes/jadwals')
 app.use('/jadwal', jadwalRouter)
-
-const kehadiranRouter = require('./routes/kehadirans')
 app.use('/kehadiran', kehadiranRouter)
 
-const adminPanel = require('./src')
-app.use('/', adminPanel)
+//api sect
+
+
+const adminRouter = require('./src/index')
+app.use('/admin', adminRouter)
 
 app.listen(process.env.PORT || 1337, () => console.log('Server Started'))

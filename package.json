@@ -10,8 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "admin-bro": "^4.0.1",
+    "admin-bro-expressjs": "^2.1.1",
+    "admin-bro-mongoose": "^0.5.2",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "express-formidable": "^1.2.0",
     "mongoose": "^6.2.9"
   },
   "engines": {

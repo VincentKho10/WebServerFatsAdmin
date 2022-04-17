@@ -1,6 +1,4 @@
-const mongoose = require('mongoose');
-const Mahasiswa = require('./mahasiswa');
-const Dosen = require('./dosen');
+const {Schema,mongoose} = require('mongoose');
 
 const jadwalSchema = new mongoose.Schema({
     program_studi: {
@@ -12,7 +10,8 @@ const jadwalSchema = new mongoose.Schema({
         required: true
     },
     kelas: {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: 'kelas',
         required: true
     },
     waktu: {
@@ -20,13 +19,13 @@ const jadwalSchema = new mongoose.Schema({
         required: true
     },
     dosen: {
-        type: Map,
-        of: Dosen.dosenSchema,
+        type: Schema.Types.ObjectId,
+        ref: 'dosen',
         required: true
     },
     mahasiswas: [{
-        type: Map,
-        of: Mahasiswa.mahasiswaSchema,
+        type: Schema.Types.ObjectId,
+        ref: 'mahasiswa',
         required: false
     }],
     semester: {
@@ -39,7 +38,7 @@ const jadwalSchema = new mongoose.Schema({
     },
     jumlah_mahasiswa: {
         type: String,
-        required: true
+        required: false
     },
     ruang: {
         type: String,
@@ -47,8 +46,10 @@ const jadwalSchema = new mongoose.Schema({
     },
     active: {
         type: Boolean,
-        required: true
+        required: false
     },
 })
 
-module.exports = mongoose.model('jadwal', jadwalSchema);
+jadwalSchema.index({semester: 1, kode_mk: 1, kelas: 1}, {unique: true});
+
+module.exports = mongoose.model('jadwal', jadwalSchema)
