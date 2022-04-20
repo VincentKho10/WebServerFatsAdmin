@@ -4,6 +4,7 @@ const Dosen = require('../models/dosen')
 
 //Getting all
 router.get('/', async (req, res)=>{
+    res.header("Access-Control-Allow-Origin", "*");
     try{
         const dosens = await Dosen.find()
         res.json(dosens)
@@ -13,10 +14,12 @@ router.get('/', async (req, res)=>{
 })
 //Getting one
 router.get('/:id', getDosen ,(req, res)=>{
+    res.header("Access-Control-Allow-Origin", "*");
     res.json(res.dosen)
 })
 //Creating one
 router.post('/', async(req, res)=>{
+    res.header("Access-Control-Allow-Origin", "*");
     const dosen = new Dosen({
         nama: req.body.nama,
         nrp: req.body.nrp,
@@ -31,6 +34,7 @@ router.post('/', async(req, res)=>{
 })
 //Updating one
 router.patch('/:id', getDosen, async(req, res)=>{
+    res.header("Access-Control-Allow-Origin", "*");
     if(req.body.nama != null){
         res.dosen.nama = req.body.nama
     }if(req.body.nrp != null){
@@ -48,6 +52,7 @@ router.patch('/:id', getDosen, async(req, res)=>{
 //Deleting one
 
 router.delete('/:id', getDosen, async(req, res)=>{
+    res.header("Access-Control-Allow-Origin", "*");
     try {
         await res.dosen.remove()
         res.json({ message: 'Deleted Dosen'})
@@ -57,6 +62,7 @@ router.delete('/:id', getDosen, async(req, res)=>{
 })
 
 async function getDosen(req,res,next) {
+    res.header("Access-Control-Allow-Origin", "*");
     let dosen
     try {
         dosen = await Dosen.findById(req.params.id)
