@@ -1,4 +1,4 @@
-GET http://localhost:3000/jadwal
+GET https://wsfats.herokuapp.com/jadwal
 
 ###
 
@@ -6,7 +6,7 @@ GET http://localhost:3000/jadwal/62590b4084dcbe470b7be481
 
 ###
 
-POST http://localhost:3000/jadwal
+POST https://wsfats.herokuapp.com/jadwal
 Content-Type: application/json
 
 {

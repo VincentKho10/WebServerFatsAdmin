@@ -1,4 +1,4 @@
-GET http://localhost:3000/user
+GET https://wsfats.herokuapp.com/user
 
 ###
 
@@ -6,25 +6,25 @@ GET http://localhost:3000/user/6258564b4bdd962056b9692f
 
 ###
 
-POST http://localhost:3000/user
+POST http://localhost:1337/user
 Content-Type: application/json
 
 {
     "mahasiswa":{
-        "nama": "John Don",
-        "password": "testpass12",
-        "nrp": "720033"
+        "nama": "Doni",
+        "nrp": "7072002",
+        "password": "test123"
     },
     "mac_address": "23:DE:E4:R5:E4:EE"
 }
 
 ###
 
-DELETE http://localhost:3000/user/6258564b4bdd962056b9692f
+DELETE http://localhost:1337/user/625bf4f7f7a77b2a7bda2bab
 
 ###
 
-PATCH http://localhost:3000/user/6258564b4bdd962056b9692f
+PATCH http://localhost:3000/user/625bed3b43fdbe4c01187207
 Content-Type: application/json
 
 {

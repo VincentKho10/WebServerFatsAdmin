@@ -1,8 +1,8 @@
-GET https://fatsserveradmin.herokuapp.com/dosen
+GET https://wsfats.herokuapp.com/dosen
 
 ###
 
-GET http://localhost:3000/dosen/6257d8b447024aa3cc627dbc
+GET http://localhost:1337/dosen/6257d8b447024aa3cc627dbc
 
 ###
 

@@ -19,8 +19,9 @@ router.get('/:id', getDosen ,(req, res)=>{
 
 //Creating one
 router.post('/', async(req, res)=>{
+    var newmhs = new Map(JSON.parse(req.body.mahasiswa))
     const user = new User({
-        mahasiswa: req.body.mahasiswa,
+        mahasiswa: newmhs,
         mac_address: req.body.mac_address
     });
     try {

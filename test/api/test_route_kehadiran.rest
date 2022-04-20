@@ -6,7 +6,7 @@ GET http://localhost:1337/kehadiran/625927d08076bfcb5cca802f
 
 ###
 
-POST http://localhost:1337/kehadiran
+POST https://wsfats.herokuapp.com/kehadiran
 Content-Type: application/json
 
 {
